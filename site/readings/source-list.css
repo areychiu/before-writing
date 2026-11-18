@@ -1,0 +1,63 @@
+/* Compact bibliography shared by the main page and the reading desk. */
+:is(.source-directory, #references .chapter-body) .ref-list article {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  column-gap: 18px;
+  row-gap: 3px;
+  padding: 10px 0;
+  border-top: 1px solid var(--reference-rule, #d5dbc9);
+  align-items: start;
+}
+:is(.source-directory, #references .chapter-body) .ref-list b {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font: 700 14px/1.65 "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+}
+:is(.source-directory, #references .chapter-body) .ref-list b::before {
+  content: "◆";
+  color: var(--reference-accent, #31553a);
+  font-size: 9px;
+  flex: none;
+}
+:is(.source-directory, #references .chapter-body) .ref-list p {
+  grid-column: 2;
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+  max-width: none;
+  overflow-wrap: anywhere;
+}
+:is(.source-directory, #references .chapter-body) .ref-list .note {
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 0;
+}
+#references .chapter-body > h3 {
+  font: 700 18px/1.6 "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+  margin: 24px 0 8px;
+  color: #31553a;
+}
+#references .chapter-body > p { font-size: 14px; line-height: 1.75; margin: 12px 0; }
+#references .chapter-body > h2 { font-size: 29px; line-height: 1.5; margin: 12px 0 16px; }
+#references .journey-milestone { padding: 13px 0; margin-bottom: 10px; }
+#references .journey-milestone > p { font-size: 26px; }
+#references .literature-entry { padding: 14px 18px; margin: 16px 0; }
+@media (max-width: 700px) {
+  :is(.source-directory, #references .chapter-body) .ref-list article { grid-template-columns: 1fr; gap: 4px; padding-block: 11px; }
+  :is(.source-directory, #references .chapter-body) .ref-list b { grid-column: 1; grid-row: auto; font-size: 14px; }
+  :is(.source-directory, #references .chapter-body) .ref-list p { grid-column: 1; font-size: 13px; }
+  :is(.source-directory, #references .chapter-body) .ref-list .note { font-size: 11px; }
+}
+@media screen {
+  html[data-view="projection"] #references .ref-list b::before,
+  html[data-view="projection"] #references .chapter-body > h3 { color: #000; }
+}
+@media print {
+  :is(.source-directory, #references .chapter-body) .ref-list article { break-inside: avoid; }
+  :is(.source-directory, #references .chapter-body) .ref-list b { font-size: 10pt; }
+  :is(.source-directory, #references .chapter-body) .ref-list p { font-size: 10pt; }
+  :is(.source-directory, #references .chapter-body) .ref-list .note { font-size: 9pt; }
+}

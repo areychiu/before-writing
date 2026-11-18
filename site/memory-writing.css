@@ -1,0 +1,42 @@
+/* Spatial memory: one colour relationship shared by the main and youth pages. */
+.memory-writing-feature { margin-block: 30px; padding-block: 22px 26px; border-top: 3px solid var(--phase-line, #2454d6); }
+.memory-writing-feature .memory-writing-kicker { margin: 0 0 8px; color: var(--accent); font: 700 14px/1.7 var(--sans); }
+.memory-writing-feature > h3 { margin: 0 0 14px; font-size: clamp(25px, 3vw, 34px); }
+.memory-writing-feature .memory-writing-intro { margin-block: 0 18px; }
+.humanities .reading .memory-writing-plate { width: 100%; margin: 20px 0; padding: clamp(10px, 2vw, 18px); min-width: 0; background: var(--paper); border: 1px solid var(--line); }
+.memory-writing-plate > a { display: block; cursor: zoom-in; }
+.humanities .reading .memory-writing-plate img { display: block; width: 100%; height: auto; max-height: none; aspect-ratio: auto; object-fit: contain; }
+.memory-writing-plate figcaption { margin-top: 10px; color: var(--muted); font: 13px/1.75 var(--sans); }
+.memory-writing-feature .memory-writing-link { display: inline-block; margin-top: 2px; padding-block: 9px; font: 700 15px/1.7 var(--sans); }
+.memory-writing-feature .memory-writing-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.memory-writing-feature .memory-related { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); }
+@media screen {
+  html:not([data-view="projection"]) :is(.journey-extension, .memory-writing-feature) {
+    --memory-ground: #edf1f3;
+    --memory-rule: #ccd5e9;
+  }
+  html:not([data-view="projection"]) .journey-extension {
+    --variant-tint: var(--memory-ground);
+    --surface: var(--variant-tint);
+  }
+  html:not([data-view="projection"]) .memory-writing-feature .memory-writing-plate {
+    background: var(--memory-ground);
+    border-color: var(--memory-rule);
+    border-bottom: 3px solid var(--variant-dot, #f2492d);
+  }
+  html:not([data-view="projection"]) .memory-writing-feature .memory-writing-link { color: var(--phase-ink, #2454d6); }
+  @supports (background: color-mix(in oklab, blue, white)) {
+    html:not([data-view="projection"]) :is(.journey-extension, .memory-writing-feature) {
+      --memory-ground: color-mix(in oklab, var(--phase-solid, #2454d6) 5%, var(--paper, #fcfbf8));
+      --memory-rule: color-mix(in oklab, var(--phase-solid, #2454d6) 24%, var(--paper, #fcfbf8));
+    }
+  }
+}
+@media (max-width: 650px) {
+  .memory-writing-feature { margin-block: 24px; padding-block: 18px 22px; }
+  .humanities .reading .memory-writing-plate { padding: 8px; }
+}
+@media print {
+  .memory-writing-feature { border-color: #000; }
+  .humanities .reading .memory-writing-plate { padding: 0; background: #fff; border: 0; }
+}

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-Hant" data-style="b">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>觀看青少年敘寫</title>
+  <link rel="stylesheet" href="../reading.css">
+  <link rel="stylesheet" href="../before-writing-comparison/f-reading.css">
+  <link rel="stylesheet" href="../before-writing-comparison/reading-journey.css">
+  <style>
+    .chapter-cover .opening-inner { animation: none; }
+
+
+
+    .opening a { color: var(--accent); font-size: 15px; }
+    .reading h3 { margin-top: 1.5em; }
+    .humanities .reading .plates { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; margin: 26px 0; }
+    .humanities .reading .plates figure { margin: 0; width: auto; padding: 12px; align-self: start; }
+    .plate-link { display: block; }
+    .case-note { color: var(--muted); font-size: 15px; }
+    .work-excerpt { margin: 24px 0 34px; padding: clamp(18px,3vw,32px); background: var(--surface, var(--paper)); border-block: 1px solid var(--line); }
+    .work-excerpt h3, .work-excerpt h4 { margin: 0 0 10px; }
+    .work-excerpt h4 { font-size: 17px; }
+    .work-excerpt blockquote { margin: 12px 0; background: transparent; padding-block: 3px; font-size: clamp(19px,2.2vw,25px); }
+    .reading .work-excerpt > :last-child { margin-bottom: 0; }
+    .map-excerpt { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; margin: 16px 0; }
+    .map-excerpt div { border: 1px solid var(--line); padding: 10px 12px; }
+    .map-excerpt strong { display: block; color: var(--accent); }
+    .reading .work-excerpt ol { margin: 6px 0 16px; padding-inline-start: 1.5em; }
+    .work-excerpt mark { background: var(--surface, var(--paper)); color: inherit; padding-inline: .08em; }
+    .humanities .reading figure.source-plate { width: 100%; margin: 18px 0; padding: 0; background: transparent; }
+    .source-plate .plate-link { position: relative; background: #fff; outline: 1px solid var(--line); }
+    .source-plate .plate-link:focus-visible { outline: 3px solid var(--accent); }
+    .source-plate img { width: 100%; max-height: none !important; }
+    .plate-focus { position: absolute; pointer-events: none; left: var(--focus-left); top: var(--focus-top); width: var(--focus-width); height: var(--focus-height); border: 2px solid var(--accent); opacity: 0; }
+    .reflection-plate { --focus-left: 11%; --focus-top: 46%; --focus-width: 79%; --focus-height: 41%; }
+    .xmind-plate { --focus-left: 41%; --focus-top: 38%; --focus-width: 35%; --focus-height: 60%; }
+    .canva-plate { --focus-left: 34%; --focus-top: 2%; --focus-width: 32%; --focus-height: 96%; }
+    .hackmd-plate { --focus-left: 1%; --focus-top: 24%; --focus-width: 98%; --focus-height: 54%; }
+    @media (prefers-reduced-motion: no-preference) {
+      [data-highlight].is-reading { animation: plate-arrives .6s ease-out both; }
+      .is-reading mark { animation: ink-emphasis .85s .18s ease-out both; }
+      .source-plate.is-reading { animation: none; }
+      .source-plate.is-reading .plate-focus { animation: find-detail 1.65s .12s ease-out both; }
+      @keyframes plate-arrives { from { transform: translateY(9px); } to { transform: translateY(0); } }
+      @keyframes ink-emphasis { from { background-color: transparent; } to { background-color: var(--surface, var(--paper)); } }
+      @keyframes find-detail { 0%,100% { opacity: 0; } 22%,68% { opacity: .8; } }
+    }
+    @media (max-width: 520px) {
+      .humanities .reading .plates { grid-template-columns: 1fr; }
+
+      .source-plate { --focus-left: 1%; --focus-top: 1%; --focus-width: 98%; --focus-height: 98%; }
+    }
+  </style>
+<link rel="stylesheet" href="../reading-scenes.css"><link rel="stylesheet" href="../humanities-plates.css"><link rel="stylesheet" href="../memory-writing.css"><link rel="stylesheet" href="../paper-surfaces.css"><meta name="release-version" content="2026.11.18.1"><meta name="release-date" content="2026-11-18"></head>
+<body class="humanities journey-extension" data-phase="3">
+<a class="skip" href="#main">跳到正文</a>
+<header class="opening chapter-cover">
+  <div class="opening-inner">
+    <div>
+      <p><a class="enter" href="../before-writing-comparison/f.html" target="_blank" rel="noopener">回到《在寫下來之前》</a></p>
+      <p class="journey-context">第三段｜書寫、主體性與回到課堂・延伸篇章</p>
+      <h1>觀看青少年敘寫</h1>
+      <p class="subtitle">在工作本、學習反思與文本閱讀裡，觀看高中生怎麼安排材料、提出問題，再用自己的方式寫下理解。</p>
+      <p class="event-info">2026 年 10 月 28 日教師研習延伸篇章<br>公開閱讀版 · 2026-11-18</p>
+    </div>
+    <figure>
+      <a class="plate-link" href="assets/contents.jpg" data-plate-open data-full-image="assets/contents.jpg" aria-label="放大圖片：古代史工作本的手寫目錄，以淡綠色植物圖樣包圍頁面" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/contents.jpg" alt="古代史工作本的手寫目錄，以淡綠色植物圖樣包圍頁面" fetchpriority="high"></a>
+      <figcaption>古代史工作本的目錄。點圖可看原尺寸。</figcaption>
+    </figure>
+  </div>
+</header>
+<nav class="chapter-nav" aria-label="篇章導覽"><div>
+  <a href="#workbook">古代史工作本</a><a href="#reflection">同一位學生的反思</a><a href="#space-memory">空間記憶與自我敘寫</a><a href="#name">我的名字</a><a href="#parzival">帕西法爾</a><a href="#workshop">研習材料</a><a href="#primary">小學延伸閱讀</a>
+</div></nav>
+<main id="main" class="reading" tabindex="-1">
+  <section id="workbook">
+    <p class="chapter-label">作品一<br>古代史工作本</p>
+    <div class="chapter-body">
+      <h2>一本工作本如何開場、轉折與收束</h2>
+      <p class="lead">序言以詩引入，目錄排出閱讀路徑。再往下看，舞蹈觀察、對自身經驗的追問和卷末心得，各自採用不同的敘寫形式。</p>
+      <div class="plates">
+        <figure data-paper="document"><a class="plate-link" href="assets/prologue.jpg" data-plate-open data-full-image="assets/prologue.jpg" aria-label="放大圖片：工作本序言手寫詩" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/prologue.jpg" alt="工作本序言手寫詩" loading="lazy"></a><figcaption>引言詩（序言）</figcaption></figure>
+        <figure data-paper="document"><a class="plate-link" href="assets/contents.jpg" data-plate-open data-full-image="assets/contents.jpg" aria-label="放大圖片：工作本目錄及手繪邊飾" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/contents.jpg" alt="工作本目錄及手繪邊飾" loading="lazy"></a><figcaption>目錄</figcaption></figure>
+      </div>
+      <h3>現代舞《囍》</h3>
+      <p>學生從舞作裡看到的動作與情境出發，記下小組討論的語句，再把手繪舞姿放進頁面。可以順著這三種材料讀，看看觀看、言說和圖像各自留下了什麼。</p>
+      <figure data-highlight data-paper="document"><a class="plate-link" href="assets/dance.jpg" data-plate-open data-full-image="assets/dance.jpg" aria-label="放大圖片：現代舞囍的觀察、討論記錄與手繪舞姿" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/dance.jpg" alt="現代舞囍的觀察、討論記錄與手繪舞姿" loading="lazy"></a><figcaption>現代舞《囍》，取工作本相關段落。</figcaption></figure>
+      <div class="plates">
+        <figure data-paper="document"><a class="plate-link" href="assets/step-forward.jpg" data-plate-open data-full-image="assets/step-forward.jpg" aria-label="放大圖片：當你決意向前的刊頭及前三段" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/step-forward.jpg" alt="當你決意向前的刊頭及前三段" loading="lazy"></a><figcaption>〈當你決意向前〉刊頭與前三段</figcaption></figure>
+        <figure data-paper="document"><a class="plate-link" href="assets/conclusion.jpg" data-plate-open data-full-image="assets/conclusion.jpg" aria-label="放大圖片：工作本卷末的手寫心得" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/conclusion.jpg" alt="工作本卷末的手寫心得" loading="lazy"></a><figcaption>結｜心得</figcaption></figure>
+      </div>
+      <p class="case-note"><a href="https://docs.google.com/document/d/1akY-G9j6utBi0X88yLqE8tGntBj9b73Is5bFT3Q5mJ0/edit" target="_blank" rel="noopener">古代史工作本原件</a></p>
+    </div>
+  </section>
+  <section id="reflection">
+    <p class="chapter-label">同一位學生<br>學習歷程反思</p>
+    <div class="chapter-body">
+      <h2>回看自己是怎麼學的</h2>
+      <p class="lead">把工作本與同一位學生後來撰寫的學習歷程檔案並讀，可以看見她如何回頭敘述課程、提問與小組討論。</p>
+      <p>檔案寫到教師在引入新知後提出問題、小組發展各自的想法，再由教師收束。學生也回頭串起陶彩、圖騰、文字和名字等課程內容。這裡可觀察的後設認知，是她開始把自己怎麼參與學習、課程的問題怎麼出現，寫成可回看的歷程。</p>
+      <article class="work-excerpt" data-highlight aria-labelledby="reflection-excerpt">
+        <h3 id="reflection-excerpt">這堂課老師的上課方式？</h3>
+        <figure class="source-plate reflection-plate" data-highlight data-paper="document">
+          <a class="plate-link" href="assets/reflection-source.jpg" data-plate-open data-full-image="assets/reflection-source.jpg" aria-label="放大圖片：古代史學習歷程第四頁。學生寫下前一日的回顧、小組討論、全班報告與教師收束。" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener">
+            <picture><source media="(max-width: 520px)" srcset="assets/reflection-detail.jpg"><img src="assets/reflection-source.jpg" alt="古代史學習歷程第四頁。學生寫下前一日的回顧、小組討論、全班報告與教師收束。" loading="lazy"></picture><span class="plate-focus" aria-hidden="true"></span>
+          </a><figcaption>古代史學習歷程，第 4 頁。下半頁寫的是她怎麼經歷一堂課。</figcaption>
+        </figure>
+        <blockquote>首先會帶入回顧，喚醒大家前一天的記憶</blockquote>
+        <p>她接著寫到教師提問，把時間留給小組討論，讓大家把新學的內容用回問題上，<mark>得出屬於每個人的結論</mark>。</p>
+        <p class="case-note">學生古代史學習歷程檔案第 4 頁。引句標點依閱讀版調整，其餘為導讀。</p>
+      </article>
+      
+    </div>
+  </section>
+
+  <section id="space-memory" class="memory-writing-feature" aria-labelledby="space-memory-title">
+    <p class="chapter-label">空間記憶<br>青少年的自我敘寫</p>
+    <div class="chapter-body">
+      <h2 id="space-memory-title">不同作品中的空間、記憶與文字</h2>
+      <p class="lead">青少年從空間記憶中長出自己的敘寫。</p>
+      <p class="memory-writing-intro">一扇窗、一間屋、熟悉的生活角落，都可以成為回望自己的起點。這裡並列不同青少年的作品：他們以文字、素描、照片與拼貼，重新安排記憶，也說出自己與這些地方的關係。</p>
+      <figure class="memory-writing-plate" data-kind="work" data-paper="document"><a href="../media/reading-scenes/architecture-exhibition-1.jpg" data-plate-open data-full-image="../media/reading-scenes/architecture-exhibition-1.jpg" aria-label="放大圖片：建築課程作品 1｜空間、記憶與文字" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/architecture-exhibition-1.jpg" width="1440" height="810" loading="lazy" alt="建築課程作品 1｜空間、記憶與文字"></a><figcaption>建築課程作品圖版｜〈映射心理的那扇窗〉與其他窗景、生活記憶作品。點圖看完整圖版。</figcaption></figure>
+      <div class="scene-collection" data-scene-group="youth-memory-works"><h3>沿著其他作品繼續看</h3><div class="scene-gallery scene-gallery-works"><figure class="scene-tile" data-kind="work" data-paper="document"><a href="../media/reading-scenes/architecture-exhibition-2.jpg" data-plate-open data-full-image="../media/reading-scenes/architecture-exhibition-2.jpg" aria-label="放大圖片：建築課程作品 2｜空間、記憶與文字" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/architecture-exhibition-2.jpg" width="1440" height="810" loading="lazy" alt="建築課程作品 2｜空間、記憶與文字"></a><figcaption>建築課程作品 2｜空間、記憶與文字</figcaption></figure><figure class="scene-tile" data-kind="work" data-paper="document"><a href="../media/reading-scenes/architecture-exhibition-3.jpg" data-plate-open data-full-image="../media/reading-scenes/architecture-exhibition-3.jpg" aria-label="放大圖片：建築課程作品 3｜空間、記憶與文字" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/architecture-exhibition-3.jpg" width="1440" height="810" loading="lazy" alt="建築課程作品 3｜空間、記憶與文字"></a><figcaption>建築課程作品 3｜空間、記憶與文字</figcaption></figure><figure class="scene-tile" data-kind="work" data-paper="document"><a href="../media/reading-scenes/architecture-exhibition-4.jpg" data-plate-open data-full-image="../media/reading-scenes/architecture-exhibition-4.jpg" aria-label="放大圖片：建築課程作品 4｜空間、記憶與文字" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/architecture-exhibition-4.jpg" width="1440" height="810" loading="lazy" alt="建築課程作品 4｜空間、記憶與文字"></a><figcaption>建築課程作品 4｜空間、記憶與文字</figcaption></figure></div></div>
+      <div class="scene-collection memory-related" data-scene-group="youth-memory-context"><h3>相關課堂圖像｜空間的觀察與組織</h3><div class="scene-gallery"><figure class="scene-tile" data-kind="board"><a href="../media/reading-scenes/20231206_123303.jpg" data-plate-open data-full-image="../media/reading-scenes/20231206_123303.jpg" aria-label="放大圖片：以建築形態組織線索" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20231206_123303.jpg" width="1239" height="929" loading="lazy" alt="以建築形態組織線索"></a><figcaption>以建築形態組織線索</figcaption></figure><figure class="scene-tile" data-kind="work"><a href="../media/reading-scenes/20260328_114302.jpg" data-plate-open data-full-image="../media/reading-scenes/20260328_114302.jpg" aria-label="放大圖片：以照片並置生活中的空間" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20260328_114302.jpg" width="1920" height="555" loading="lazy" alt="以照片並置生活中的空間"></a><figcaption>以照片並置生活中的空間</figcaption></figure></div></div>
+    </div>
+  </section>
+  <section id="name">
+    <p class="chapter-label">作品二<br>古代史與命名</p>
+    <div class="chapter-body">
+      <div class="scene-heading"><figure class="scene-mark" data-kind="mark" data-paper="icon"><a href="../media/reading-scenes/20231101_081901.jpg" data-plate-open data-full-image="../media/reading-scenes/20231101_081901.jpg" aria-label="放大圖片：紅色線條描繪的動物圖記" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20231101_081901.jpg" width="696" height="929" loading="lazy" alt="紅色線條描繪的動物圖記"></a></figure><h2>從武梁祠畫像石到〈我的名字〉</h2></div>
+      <p>在「宗祠（武梁祠畫像石）」一節，學生先按畫面的上下位置整理天界、仙界與人間，再用這個結構說明自己讀到的信仰與倫理秩序。</p>
+      <figure data-paper="document"><a class="plate-link" href="assets/wuliang.jpg" data-plate-open data-full-image="assets/wuliang.jpg" aria-label="放大圖片：工作本用來說明武梁祠畫像石的參考圖" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/wuliang.jpg" alt="工作本用來說明武梁祠畫像石的參考圖" loading="lazy"></a><figcaption>學生在武梁祠段落所附的參考圖。</figcaption></figure>
+      <h3>華人取名字背後的價值意涵：我的名字</h3>
+      <p>到了命名一節，學生轉向世代差異與父母的期許，再以朝陽、松林、泉水與美玉寫出自己理解的名字。把這一段接在畫像石之後，可以看見同一份工作本如何從解讀公共文化圖像，走到用意象書寫自己與家庭。</p>
+      <div class="work-excerpt" data-highlight>
+        <blockquote>陽光和美玉就這樣悄悄相遇了。</blockquote>
+        <p class="case-note">〈我的名字〉原文短摘。學生把字義寫成可想像的畫面。</p>
+      </div>
+      <p><a href="https://docs.google.com/document/d/15sIOkUDDWcs-5m_Z9iNHRHpsNyj2wtglOVRu5octQso/edit" target="_blank" rel="noopener">開啟工作本原件（武梁祠與〈我的名字〉）</a></p>
+    <div class="scene-collection" data-scene-group="youth-name"><h3>相關課堂圖像｜符號、圖記與文化線索</h3><div class="scene-gallery "><figure class="scene-tile" data-kind="board"><a href="../media/reading-scenes/20220628_123819.jpg" data-plate-open data-full-image="../media/reading-scenes/20220628_123819.jpg" aria-label="放大圖片：圖像、符號與文字的板書" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20220628_123819.jpg" width="1910" height="929" loading="lazy" alt="圖像、符號與文字的板書"></a><figcaption>圖像、符號與文字的板書</figcaption></figure><figure class="scene-tile" data-kind="photo"><a href="../media/reading-scenes/20251205_095444.jpg" data-plate-open data-full-image="../media/reading-scenes/20251205_095444.jpg" aria-label="放大圖片：牆上並列的紅色圖記作品" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20251205_095444.jpg" width="1239" height="929" loading="lazy" alt="牆上並列的紅色圖記作品"></a><figcaption>牆上並列的紅色圖記作品</figcaption></figure><figure class="scene-tile" data-kind="board"><a href="../media/reading-scenes/20260309_102734.jpg" data-plate-open data-full-image="../media/reading-scenes/20260309_102734.jpg" aria-label="放大圖片：以詞語、圖像與圈線整理文化線索" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20260309_102734.jpg" width="1650" height="929" loading="lazy" alt="以詞語、圖像與圈線整理文化線索"></a><figcaption>以詞語、圖像與圈線整理文化線索</figcaption></figure></div></div></div>
+  </section>
+  <section id="parzival">
+    <p class="chapter-label">課程作品<br>帕西法爾</p>
+    <div class="chapter-body">
+      <h2>用圖整理人物，用文字重讀情節</h2>
+      <article class="work-excerpt" data-highlight aria-labelledby="map-excerpt">
+        <h3 id="map-excerpt">加穆雷特人物關係與遭遇</h3>
+        <figure class="source-plate xmind-plate" data-highlight data-paper="document">
+          <a class="plate-link" href="https://xmind.ai/share/A8gU9QJV?xid=bJzUEuF2" data-plate-open data-full-image="assets/xmind-source.jpg" aria-label="放大圖片：以加穆雷特為中心的概念圖，以實線與虛線連接人物及事件。" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener">
+            <picture><source media="(max-width: 520px)" srcset="assets/xmind-detail.jpg"><img src="assets/xmind-source.jpg" alt="以加穆雷特為中心的概念圖，以實線與虛線連接人物及事件。" loading="lazy"></picture><span class="plate-focus" aria-hidden="true"></span>
+          </a><figcaption>概念圖局部。從加穆雷特往右下方看，可以順著線找到赫澤萊德和帕西法爾。</figcaption>
+        </figure>
+        <div class="map-excerpt">
+          <div><strong>加穆雷特與加洛伊斯</strong>兄弟</div>
+          <div><strong>加穆雷特與帕西法爾</strong>父子</div>
+          <div><strong>加穆雷特與赫澤萊德</strong>夫妻</div>
+          <div><strong>赫澤萊德與帕西法爾</strong>母子</div>
+        </div>
+        <p class="case-note">依學生圖上標示摘錄四組關係。原圖還把會議、交戰與比武等遭遇放進人物關係之間。</p>
+        <p><a href="https://xmind.ai/share/A8gU9QJV?xid=bJzUEuF2" target="_blank" rel="noopener">看完整人物關係圖</a></p>
+      </article>
+      <article class="work-excerpt" data-highlight>
+        <h3>帕西法爾課程作業</h3>
+        <figure class="source-plate canva-plate" data-highlight data-paper="document">
+          <a class="plate-link" href="https://www.canva.com/design/DAGqes5FjTA/1u6lqPwL4Vbnw4Uo-T-FvQ/view" data-plate-open data-full-image="assets/canva-source.jpg" aria-label="放大圖片：摺頁書正文分成三欄，編排章節標題、學生敘寫與騎士插圖。" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener">
+            <picture><source media="(max-width: 520px)" srcset="assets/canva-detail.jpg"><img src="assets/canva-source.jpg" alt="摺頁書正文分成三欄，編排章節標題、學生敘寫與騎士插圖。" loading="lazy"></picture><span class="plate-focus" aria-hidden="true"></span>
+          </a><figcaption>Canva 第 7 頁局部。中欄〈森林赤子的騎士夢〉把一段旅程編排成章節，下方配有插圖。</figcaption>
+        </figure>
+        <p>從簡報第 2 頁的目錄，可以看出學生用哪些形式重讀故事。</p>
+        <ol>
+          <li>加穆雷特的人物關係與遭遇、赫澤萊德的噩夢</li>
+          <li>摺頁書：帕西法爾的旅程</li>
+          <li>用粉彩建構出故事情節：〈霧。誤。悟〉</li>
+          <li>揣摩角色：小奧比洛特</li>
+          <li>故事結束，然後……</li>
+        </ol>
+        <p><a href="https://www.canva.com/design/DAGqes5FjTA/1u6lqPwL4Vbnw4Uo-T-FvQ/view" target="_blank" rel="noopener">翻閱完整作業</a></p>
+      </article>
+      <article class="work-excerpt" data-highlight>
+        <h3>〈帕西法爾文本分析〉</h3>
+        <h4>赫澤萊德的夢境</h4>
+        <figure class="source-plate hackmd-plate" data-highlight data-paper="document">
+          <a class="plate-link" href="https://hackmd.io/@Happyppy/帕西法爾文本分析#元素整理" data-plate-open data-full-image="assets/hackmd-source.jpg" aria-label="放大圖片：HackMD 原段。學生寫完直覺解讀，再列出夢境元素，分析獅鷲、蛇與龍的象徵。" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener">
+            <picture><source media="(max-width: 520px)" srcset="assets/hackmd-detail.jpg"><img src="assets/hackmd-source.jpg" alt="HackMD 原段。學生寫完直覺解讀，再列出夢境元素，分析獅鷲、蛇與龍的象徵。" loading="lazy"></picture><span class="plate-focus" aria-hidden="true"></span>
+          </a><figcaption>HackMD 原段局部。從上方的整段解讀，到下方逐項辨認夢裡的元素。</figcaption>
+        </figure>
+        <blockquote>在第一次以直覺來說的話，我的理解是這樣的。</blockquote>
+        <p>學生先對照中文版和自己由英譯轉成中文的段落，接著解讀獅鷲、蛇與龍。她在寫出第一個直覺後，<mark>再回到字詞</mark>，重新思考角色如何蛻變、如何走進自己的試煉。</p>
+        <p><a href="https://hackmd.io/@Happyppy/帕西法爾文本分析" target="_blank" rel="noopener">讀完整文本分析</a></p>
+      </article>
+    </div>
+  </section>
+  <section id="workshop">
+    <p class="chapter-label">教師研習<br>講義與後製材料</p>
+    <div class="chapter-body">
+      <h2>回到教師在書寫之前做的事</h2>
+      <p>工作本自由書寫指南談到，教師可以提供共同問題、格式或概念線索，讓學生練習自行下標、選材與表述。研習講義也分別談到高中如何引入資料、評論和個人觀點，以及如何用板書提供思考線索。</p>
+      <div class="plates">
+        <figure data-paper="document"><a class="plate-link" href="assets/guide-scaffold.jpg" data-plate-open data-full-image="assets/guide-scaffold.jpg" aria-label="放大圖片：工作本指南中規範與自由意志的示意" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/guide-scaffold.jpg" alt="工作本指南中規範與自由意志的示意" loading="lazy"></a><figcaption>《華德福工作本自由書寫指南》投影片 6</figcaption></figure>
+        <figure data-paper="document"><a class="plate-link" href="assets/guide-highschool.jpg" data-plate-open data-full-image="assets/guide-highschool.jpg" aria-label="放大圖片：工作本指南中的高中階段書寫方向" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/guide-highschool.jpg" alt="工作本指南中的高中階段書寫方向" loading="lazy"></a><figcaption>《華德福工作本自由書寫指南》投影片 9</figcaption></figure>
+      </div>
+      <details><summary>研習講義摘頁</summary><div class="inside">
+        <ul><li><a href="assets/handout-highschool.jpg" target="_blank" rel="noopener">下午場講義第 5 頁</a>，高中標題、提問、引用與數位排版。</li><li><a href="assets/handout-board.jpg" target="_blank" rel="noopener">含手寫黑板與 LINE 整理版第 7 頁</a>，板書鷹架與思考連結的示例。</li></ul>
+      </div></details>
+      <details><summary>回顧與意義形成</summary><div class="inside">
+        <ul><li><a href="assets/recall.jpg" target="_blank" rel="noopener">《喚醒與重構》後製簡報第 3 頁</a>，從回顧重建經驗的研習整理。</li><li><a href="assets/meaning.jpg" target="_blank" rel="noopener">〈意義如何形成？〉海報</a>，作為對話、理解與參與者改變的延伸材料。</li></ul>
+      </div></details>
+    <div class="scene-collection" data-scene-group="youth-workshop"><h3>從觀看與操作走向表達</h3><div class="scene-gallery "><figure class="scene-tile" data-kind="photo"><a href="../media/reading-scenes/20260328_105545.jpg" data-plate-open data-full-image="../media/reading-scenes/20260328_105545.jpg" aria-label="放大圖片：音樂與童謠改編的展示" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20260328_105545.jpg" width="1650" height="929" loading="lazy" alt="音樂與童謠改編的展示"></a><figcaption>音樂與童謠改編的展示</figcaption></figure><figure class="scene-tile" data-kind="photo"><a href="../media/reading-scenes/20260328_105603.jpg" data-plate-open data-full-image="../media/reading-scenes/20260328_105603.jpg" aria-label="放大圖片：顯微鏡、觀察與課程展示" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20260328_105603.jpg" width="1650" height="929" loading="lazy" alt="顯微鏡、觀察與課程展示"></a><figcaption>顯微鏡、觀察與課程展示</figcaption></figure><figure class="scene-tile" data-kind="photo"><a href="../media/reading-scenes/20251226_194129.jpg" data-plate-open data-full-image="../media/reading-scenes/20251226_194129.jpg" aria-label="放大圖片：表演者與周圍聆聽的人" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="../media/reading-scenes/20251226_194129.jpg" width="1239" height="929" loading="lazy" alt="表演者與周圍聆聽的人"></a><figcaption>表演者與周圍聆聽的人</figcaption></figure></div></div></div>
+  </section>
+  <section id="primary">
+    <p class="chapter-label">重要延伸閱讀<br>小學階段</p>
+    <div class="chapter-body">
+      <h2>林倩詒老師談小學的回顧與討論</h2>
+      <p><strong><a href="assets/recall-the-learning-alchemy.pdf" target="_blank" rel="noopener">開啟完整簡報《「回溯」的煉金術》（PDF）</a></strong></p>
+      <p class="case-note">《「回溯」的煉金術：華德福主課程中的學習轉化》以教師實務訪談為基礎。下文為簡報摘頁與導讀。</p>
+      <h3>先說出片段，再聽同學怎麼記得</h3>
+      <p>一、二年級的例子從說與聽開始。孩子分享的片段未必按順序出現，教師先肯認各自記得的部分，再協助全班把它們組織成整體。這裡可以觀察孩子怎麼從想說，慢慢走到願意聽別人說。</p>
+      <div class="plates" data-highlight>
+        <figure data-paper="document"><a class="plate-link" href="assets/lin-oral.jpg" data-plate-open data-full-image="assets/lin-oral.jpg" aria-label="放大圖片：一二年級從說、聽和分享片段建立口語秩序" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/lin-oral.jpg" alt="一二年級從說、聽和分享片段建立口語秩序" loading="lazy"></a><figcaption>第 5 頁｜一、二年級的說與聽</figcaption></figure>
+        <figure data-paper="document"><a class="plate-link" href="assets/lin-eagle.jpg" data-plate-open data-full-image="assets/lin-eagle.jpg" aria-label="放大圖片：四年級從老鷹的視角描述人類並採取不同寫作方式" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/lin-eagle.jpg" alt="四年級從老鷹的視角描述人類並採取不同寫作方式" loading="lazy"></a><figcaption>第 7 頁｜四年級的老鷹案例</figcaption></figure>
+      </div>
+      <p>四年級的案例裡，教師引入老鷹視力的知識，孩子換到老鷹的視角看人，從而有了自己的描述。簡報也提到，同一份素材可以有人寫兩段描述，有人寫成劇本。</p>
+      <h3>回溯與篩選，然後才讀文本和書寫</h3>
+      <p>第 8 頁呈現一個具體做法。教師可以先限定回顧焦點，例如只描述動作或專注情感，也可在黑板上用不依順序的關鍵字提供線索。等孩子先選擇、組織過，再用文本檢查和釐清。</p>
+      <figure data-highlight data-paper="document"><a class="plate-link" href="assets/lin-recall-to-writing.jpg" data-plate-open data-full-image="assets/lin-recall-to-writing.jpg" aria-label="放大圖片：從回溯、焦點篩選到閱讀文本與書寫的四步流程" aria-haspopup="dialog" aria-controls="photo" target="_blank" rel="noopener"><img src="assets/lin-recall-to-writing.jpg" alt="從回溯、焦點篩選到閱讀文本與書寫的四步流程" loading="lazy"></a><figcaption>第 8 頁｜從回溯到工作本</figcaption></figure>
+      <h3>和本篇高中案例並讀</h3>
+      <p>讀小學案例時，可以先看教師怎麼提問、孩子怎麼把各自記得的事說出來、同學的回答怎麼彼此補足。讀本篇高中案例時，還能沿著成品追問：學生怎麼選材、自訂章節、解讀作品，或回頭辨認自己形成理解的過程？古代史工作本和學習歷程檔案的並讀，正好把後面這一層看得更清楚。</p>
+      <p class="case-note">另可交叉讀 2025 年 6 月 28 日的 HackMD 筆記。它把回顧分為個人重建、分享釐清及共同建構三個相連階段，是這裡的另一份參照。</p>
+      <p><a href="https://hackmd.io/@areychiu/rJtDSSLNxx#回顧、分享與釐清" target="_blank" rel="noopener">閱讀 HackMD〈回顧、分享與釐清〉</a></p>
+    </div>
+  </section>
+</main>
+<footer class="colophon">本頁為學生作品與研習素材的公開閱讀版。原件、來源及修訂紀錄由專案保存。</footer>
+<script>
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('is-reading');
+        observer.unobserve(entry.target);
+      }
+    }, { threshold: 0.15 });
+    document.querySelectorAll('[data-highlight]').forEach(plate => observer.observe(plate));
+  }
+</script>
+<dialog id="photo" aria-label="圖片放大檢視"><div class="photo-viewer-bar"><button id="close" type="button">關閉照片，回到文章</button><button id="photo-zoom" type="button" aria-pressed="false">放大看細節</button><p id="photo-description"></p></div><div class="photo-viewer-image" tabindex="0" role="region" aria-label="完整圖版，可捲動查看放大細節"><img alt=""></div></dialog><script src="../humanities-plates.js" defer></script></body>
+</html>

@@ -1,0 +1,61 @@
+/* White paper stays white; its surrounding mat supplies the separation. */
+@media screen {
+  :root {
+    --paper-mat: #e4e7e9;
+    --paper-edge: #b1b8bd;
+    --paper-shadow: #25272224;
+  }
+  @supports (background: color-mix(in oklab, black, white)) {
+    :root {
+      --paper-mat: color-mix(in oklab, var(--ink, #252722) 10%, var(--paper, #fcfbf8));
+      --paper-edge: color-mix(in oklab, var(--ink, #252722) 28%, var(--paper, #fcfbf8));
+      --paper-shadow: color-mix(in srgb, var(--ink, #252722) 14%, transparent);
+    }
+  }
+  html:not([data-view="projection"]) :is(.humanities .reading, .guide-body) :is(figure[data-paper="document"], .scene-tile[data-kind="work"]) {
+    min-width: 0;
+    padding: clamp(10px, 1.6vw, 16px);
+    border: 1px solid var(--paper-edge);
+    background: var(--paper-mat);
+  }
+  html:not([data-view="projection"]) :is(.humanities .reading, .guide-body) :is(figure[data-paper="document"], .scene-tile[data-kind="work"]) img {
+    outline: 1px solid var(--paper-edge);
+    outline-offset: -1px;
+    box-shadow: 0 2px 7px var(--paper-shadow);
+  }
+  html:not([data-view="projection"]) .humanities .reading figure[data-paper="document"] > .plate-link {
+    background: transparent;
+    outline: none;
+  }
+  html:not([data-view="projection"]) .humanities .reading figure[data-paper="document"] > .plate-link:focus-visible {
+    outline: 3px solid var(--phase-ink, var(--accent));
+    outline-offset: 3px;
+  }
+  html:not([data-view="projection"]) .memory-writing-feature figure[data-paper="document"] {
+    border-bottom: 3px solid var(--variant-dot, #f2492d);
+  }
+  /* A small mark needs an edge, not a padded box that consumes its image. */
+  html:not([data-view="projection"]) figure[data-paper="icon"] img,
+  html:not([data-view="projection"]) img[data-paper="thumbnail"] {
+    outline: 1px solid var(--paper-edge);
+    outline-offset: -1px;
+    box-shadow: 0 1px 4px var(--paper-shadow);
+  }
+  html:not([data-view="projection"]) .guide-body figure[data-paper="document"] .poster-window {
+    outline: 1px solid var(--paper-edge);
+  }
+  /* The humanities viewer already has a dark ground. Match separation in the reading desk. */
+  html:not([data-view="projection"]) .poster-scroll {
+    background: var(--paper-mat);
+  }
+  html:not([data-view="projection"]) .poster-scroll img {
+    outline: 1px solid var(--paper-edge);
+    outline-offset: -1px;
+    box-shadow: 0 2px 7px var(--paper-shadow);
+  }
+  @media (max-width: 650px) {
+    html:not([data-view="projection"]) :is(.humanities .reading, .guide-body) :is(figure[data-paper="document"], .scene-tile[data-kind="work"]) {
+      padding: 8px;
+    }
+  }
+}
